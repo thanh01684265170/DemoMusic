@@ -6,21 +6,37 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.anh.mp3play.R;
+import com.example.anh.mp3play.screen.home.base.BaseGroup;
 
 
-public class AlbumFragment extends Fragment {
+public class AlbumFragment extends BaseGroup {
 
-    public AlbumFragment() {
+    @Override
+    public Fragment getInstance(Fragment fragment) {
+        return null;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_album, container, false);
+    protected void initComponent(View view) {
+
+    }
+
+    @Override
+    protected void initData(View view) {
+        showData();
+    }
+
+    @Override
+    protected int getLayoutResource() {
+        return R.layout.fragment_album;
     }
 
 
+    @Override
+    public void showData() {
+        Toast.makeText(getActivity(),"DA oc cho",Toast.LENGTH_LONG).show();
+    }
 }
