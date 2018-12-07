@@ -3,10 +3,7 @@ package com.example.anh.mp3play.screen.home.base;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.anh.mp3play.R;
 
 public abstract class BaseGroup extends Fragment implements BaseContract.View{
     private BaseContract.Presenter mPresenter;
@@ -24,6 +21,6 @@ public abstract class BaseGroup extends Fragment implements BaseContract.View{
     protected abstract void initData(android.view.View view);
     protected abstract int getLayoutResource();
     public void getData(){
-        mPresenter.getData();
+        mPresenter.getPath();
     }
 }

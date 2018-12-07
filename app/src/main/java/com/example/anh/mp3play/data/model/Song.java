@@ -1,27 +1,25 @@
 package com.example.anh.mp3play.data.model;
 
-import android.graphics.Bitmap;
-
-public class Music {
-    private Bitmap mImage;
+public class Song {
+    private String path;
     private String mSong;
     private String mArtist;
 
-    public Music() {
+    public Song() {
     }
 
-    public Music(Bitmap image, String song, String artist) {
-        mImage = image;
+    public Song(String path, String song, String artist) {
+        this.path = path;
         mSong = song;
         mArtist = artist;
     }
 
-    public Bitmap getImage() {
-        return mImage;
+    public String getPath() {
+        return path;
     }
 
-    public void setImage(Bitmap image) {
-        mImage = image;
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public String getSong() {
